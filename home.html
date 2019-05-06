@@ -1,0 +1,534 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="styles/masonry_style.css" rel="stylesheet" type="text/css" />
+    <link href="styles/font-awesome.min.css" rel="stylesheet" />
+    <!-- Common Kendo UI CSS for web widgets and widgets for data visualization. -->
+    <link href="styles/kendo.common.min.css" rel="stylesheet" />
+
+    <!-- (Optional) RTL CSS for Kendo UI widgets for the web. Include only in right-to-left applications. -->
+    <link href="styles/kendo.rtl.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Default Kendo UI theme CSS for web widgets and widgets for data visualization. -->
+    <link href="styles/kendo.default.min.css" rel="stylesheet" />
+
+    <!-- (Optional) Kendo UI Hybrid CSS. Include only if you will use the mobile devices features. -->
+    <link href="styles/kendo.default.mobile.min.css" rel="stylesheet" type="text/css" />
+    <!--<link href="styles/myStyle.css" rel="stylesheet" />-->
+    <link href="styles/test.css" rel="stylesheet" />
+    <link href="styles/kendo.dataviz.default.min.css" rel="stylesheet" />
+    <link href="styles/kendo.dataviz.min.css" rel="stylesheet" />
+    <!-- jQuery JavaScript -->
+    <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.4.1.js"></script>
+    <!-- Kendo UI combined JavaScript -->
+    <script src="js/kendo.all.min.js"></script>
+    <script src="js/console.js"></script>
+    <script src="js/jszip.min.js"></script>
+
+    <script src="https://masonry.desandro.com/v2/jquery.masonry.min.js"></script>
+    <script src="https://masonry.desandro.com/v2/js/jquery.infinitescroll.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+</head>
+<body>
+    <div id="menu">
+    <ul>
+        <li><a href="#" title="">آگهی من</a></li>
+        <li><a href="#" title="">درباره ما</a></li>
+        <li><a href="#" title="">بلاگ</a></li>
+        <li><a href="#" title="">شرایط و راهنما</a></li>
+        <li><a href="#" title="">تماس با ما</a></li>
+    </ul>
+        <div class="alert_block">
+            <a href="#/Home/Start" href2="/Home/Start" onclick="return false;">شروع با ماکزیم</a>
+            <a href="#/Ads/List" href2="/Ads/List" onclick="return false;">آگهی رایگان با سئو</a>
+        </div>
+    </div>
+    <nav id="site-nav">
+        <h1>همه آگهی ها</h1>
+        
+
+        <a href="#" title="وسایل نقلیه">
+            <i class="fa fa-car"></i>
+        </a>
+        <!--<ul class="docs-list">
+
+
+
+            <li>
+                <a href="../docs/intro.html">Introduction</a>
+
+
+
+
+
+            </li>
+            <li>
+                <a href="../docs/options.html">Options</a>
+
+
+
+
+
+            </li>
+            <li>
+                <a href="../docs/methods.html">Methods</a>
+
+
+
+
+
+            </li>
+            <li>
+                <a href="../docs/animating.html">Animating</a>
+
+
+
+
+
+            </li>
+            <li>
+                <a href="../docs/help.html">Help</a>
+
+
+
+            </li>
+        </ul>-->
+
+        <a href="#" title="وسایل الکترونیکی">
+            <i class="fa fa-plug" aria-hidden="true"></i>
+        </a>
+        <a href="#" title="مربوط به خانه">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </a>
+        <a href="#" title="خدمات">
+            <i class="fa fa-wrench" aria-hidden="true"></i>
+        </a>
+        <a href="#" title="کسب و کار">
+            <i class="fa fa-briefcase" aria-hidden="true"></i>
+        </a>
+
+    </nav>
+    <section id="content">
+        <div id="container" class="transitions-enabled infinite-scroll clearfix" ng-controller="AppCtrl">
+
+            <div class="box col4">
+                <div class="advertise">
+                    <div class="adver_header">
+                        <div class="score">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="date">
+                            <time>لحظاتی پیش</time>
+                        </div>
+                    </div>
+                    <div class="adver_pic">
+                        <img src="img/adver/adv1.jpg" />
+                    </div>
+                    <div class="adver_body">
+                        <h2>آیفون 128gig</h2>
+                        <!--<p>نو نو تازه خریدم به خاطر نیاز مالی میفروشم</p>-->
+                        <div class="price">
+                            <span class="offer">3600000 <small>تومان</small></span>
+                            <span>3500000 <small>تومان</small></span>
+                        </div>
+                    </div>
+                    <div class="more" onclick="view(this)">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box col4">
+                <div class="advertise">
+                    <div class="adver_header">
+                        <div class="score">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="date">
+                            <time>یک ربع پیش</time>
+                        </div>
+                    </div>
+                    <div class="adver_pic">
+                        <img src="img/adver/adv2.jpg" />
+                    </div>
+                    <div class="adver_body">
+                        <h2>پژو 206 سال 95</h2>
+                        <p>پژو 206 صندوقدار v8 سفید، مدل 1390،پنج سال تخفیف بیمه ...</p>
+                        <div class="price">
+                            <span class="offer">36000500 <small>تومان</small></span>
+                            <span>35500000 <small>تومان</small></span>
+                        </div>
+                    </div>
+                    <div class="more" onclick="view(this)">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box col4">
+                <div class="advertise">
+                    <div class="adver_header">
+                        <div class="score">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="date">
+                            <time>یک روز پیش</time>
+                        </div>
+                    </div>
+                    <div class="adver_pic">
+                        <img src="img/adver/adv3.jpg" />
+                    </div>
+                    <div class="adver_body">
+                        <h2>ساید بای ساید ٢٨ فوت</h2>
+                        <p>بسیار تمیز ،در حد نو کارکرد شش ماه به دلیل مسافرت فوری فروشی</p>
+                        <div class="price">
+                            <span class="offer">3600000 <small>تومان</small></span>
+                            <span>3500000 <small>تومان</small></span>
+                        </div>
+                    </div>
+                    <div class="more" onclick="view(this)">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box col4">
+                <div class="advertise">
+                    <div class="adver_header">
+                        <div class="score">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="date">
+                            <time>دو ساعت پیش</time>
+                        </div>
+                    </div>
+                    <div class="adver_pic">
+                        <img src="img/adver/adv4.jpg" />
+                    </div>
+                    <div class="adver_body">
+                        <h2>میز ناهار خوری بسیار نو</h2>
+                        <p>یه ساله خریدمش.شیشه ضخیم براش انداختم</p>
+                        <div class="price">
+                            <span class="offer">600000 <small>تومان</small></span>
+                            <span>500000 <small>تومان</small></span>
+                        </div>
+                    </div>
+                    <div class="more" onclick="view(this)">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box col4">
+                <div class="advertise">
+                    <div class="adver_header">
+                        <div class="score">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="date">
+                            <time>یک هفته پیش</time>
+                        </div>
+                    </div>
+                    <div class="adver_pic">
+                        <img src="img/adver/adv5.jpg" />
+                    </div>
+                    <div class="adver_body">
+                        <h2>فرش ۱۲ متری</h2>
+                        <p>فرش ۱۲ متری ۹۰۰ شانه ..یکساله پیش ۲ملیون خریداری شده نوی نو</p>
+                        <div class="price">
+                            <span class="offer">2600000 <small>تومان</small></span>
+                            <span>2500000 <small>تومان</small></span>
+                        </div>
+                    </div>
+                    <div class="more" onclick="view(this)">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box col4">
+                <div class="advertise">
+                    <div class="adver_header">
+                        <div class="score">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="date">
+                            <time>12 ساعت پیش</time>
+                        </div>
+                    </div>
+                    <div class="adver_pic">
+                        <img src="img/adver/adv6.jpg" />
+                    </div>
+                    <div class="adver_body">
+                        <h2>ساعت آلیاژ</h2>
+                        <p>ساعت طرح برنز چهار ماهه خریدم به علت کمبود جا میفروشم</p>
+                        <div class="price">
+                            <span class="offer">550000 <small>تومان</small></span>
+                            <span>400000 <small>تومان</small></span>
+                        </div>
+                    </div>
+                    <div class="more" onclick="view(this)">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box col4">
+                <div class="advertise">
+                    <div class="adver_header">
+                        <div class="score">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="date">
+                            <time>5 ساعت پیش</time>
+                        </div>
+                    </div>
+                    <div class="adver_pic">
+                        <img src="img/adver/adv7.jpg" />
+                    </div>
+                    <div class="adver_body">
+                        <h2>شیر آلات مدرن و جدید</h2>
+                        <p></p>
+                        <div class="price">
+                            <span class="offer">3600000 <small>تومان</small></span>
+                            <span>3500000 <small>تومان</small></span>
+                        </div>
+                    </div>
+                    <div class="more" onclick="view(this)">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box col4">
+                <div class="advertise">
+                    <div class="adver_header">
+                        <div class="score">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="date">
+                            <time>لحظاتی پیش</time>
+                        </div>
+                    </div>
+                    <div class="adver_pic">
+                        <img src="img/adver/adv8.jpg" />
+                    </div>
+                    <div class="adver_body">
+                        <h2>کاور مبل ژلاتینی کلاسیک</h2>
+                        <p>تولید کننده انواع کاور ژلاتینی مبل بااندازه گیری درمحل ...</p>
+                        <div class="price">
+                            <span class="offer">36000 <small>تومان</small></span>
+                            <span>35000 <small>تومان</small></span>
+                        </div>
+                    </div>
+                    <div class="more" onclick="view(this)">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box col4">
+                <div class="advertise">
+                    <div class="adver_header">
+                        <div class="score">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="date">
+                            <time>دو هفته پیش</time>
+                        </div>
+                    </div>
+                    <div class="adver_pic">
+                        <img src="img/adver/adv9.jpg" />
+                    </div>
+                    <div class="adver_body">
+                        <h2>لوستر شفق شامپاینی</h2>
+                        <p>لوستر شفق شامپاینی تک لامپ سرپیچ بزرگ ارتفاع حدودا ...</p>
+                        <div class="price">
+                            <span class="offer">3600000 <small>تومان</small></span>
+                            <span>3500000 <small>تومان</small></span>
+                        </div>
+                    </div>
+                    <div class="more" onclick="view(this)">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #container -->
+        
+        <nav id="page-nav">
+            <a href="pages/2.html"></a>
+        </nav>
+
+</section>
+        <script>
+  $(function(){
+
+    var $container = $('#container');
+
+    $container.imagesLoaded(function () { });
+      $container.masonry({
+          itemSelector: '.box',
+          isRTL:true,
+          isFitWidth: true
+          //columnWidth: function (containerWidth) {
+          //    return containerWidth / 4;
+          //}
+      });
+    
+
+    $container.infinitescroll({
+      navSelector  : '#page-nav',    // selector for the paged navigation
+      nextSelector : '#page-nav a',  // selector for the NEXT link (to page 2)
+      itemSelector : '.box',     // selector for all items you'll retrieve
+      loading: {
+          finishedMsg: 'No more pages to load.',
+          img: 'loading.gif'
+        }
+      },
+      // trigger Masonry as a callback
+      function( newElements ) {
+        // hide new items while they are loading
+        var $newElems = $( newElements ).css({ opacity: 0 });
+        // ensure that images load before adding to masonry layout
+        $newElems.imagesLoaded(function(){
+          // show elems now they're ready
+          $newElems.animate({ opacity: 1 });
+          $container.masonry( 'appended', $newElems, true );
+        });
+      }
+    );
+
+  });
+        </script>
+    
+        <div id="window" class="k-rtl">
+            <div class="adver_popup">
+                
+                <div class="popup_pic">
+                    <img src="img/adver/adv1.jpg" />
+                </div>
+                <div class="popup_header">
+                    <div class="right-blk">
+                        <div class="score">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="date">
+                            <time>لحظاتی پیش</time>
+                        </div>
+                    </div>
+                    
+                    <div class="price">
+                        <span class="offer"><label>قیمت :</label>3600000 <small>تومان</small></span>
+                        <span><label>تخفیف :</label>3500000 <small>تومان</small></span>
+                    </div>
+                </div>
+                <div class="popup_body">
+                    <h2>آیفون 128gig</h2>
+                    <description>
+                        <p>
+                            * در صورت نیاز به آی او اس ۱۱ بتا هم اپدیت میشه
+                            *لطفا فقط پیامک و تلگرام ، ممنونم
+                        </p>
+                        <ul>
+                            <li>گوشی کاملا بی خط و خش</li>
+                            <li>تفاوتی با نو نداره</li>
+                            <li>گلس فول</li>
+                        </ul>                       
+                    </description>
+                    
+                </div>
+                
+            </div>
+        </div>
+    
+        <script>
+                $(document).ready(function() {
+                    var myWindow = $("#window");
+                       // undo = $("#undo");
+
+                    myWindow.kendoWindow({
+                        width: "500px",
+                        actions: ["Minimize", "Close"],
+                        modal: true,
+                        visible: false,
+                        title: "نگاه اجمالی به این آگهی"
+                        //close: function() {
+                        //    undo.fadeIn();
+                        //}
+                    });
+
+                    //myWindow.data("kendoWindow").wrapper
+                    //    .find(".k-i-custom").click(function (e) {
+                    //        alert("Custom action button clicked");
+                    //        e.preventDefault();
+                    //    });
+
+                    //undo.click(function () {
+                    //    myWindow.data("kendoWindow").open();
+                    //    //undo.fadeOut();
+                    //});
+                });
+                function view(elm) {
+                    var myWindow = $("#window");
+                    myWindow.data("kendoWindow").center().open();
+                }
+        </script>
+
+    <script>
+                $(document).ready(function() {
+                    var tooltip = $("#site-nav").kendoTooltip({
+                        filter: "a",
+                        width: 120,
+                        position: "top"
+                    }).data("kendoTooltip");
+                    $("#site-nav").find("a").click(false);
+                });
+    </script>
+   
+
+</body>
+</html>
